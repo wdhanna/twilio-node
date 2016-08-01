@@ -5,7 +5,7 @@ var twilio = require('../lib'),
     crypto = require('crypto'),
     f = require('util').format;
 
-var twimlString = '<?xml version="1.0"?><Response><Message>hi</Message></Response>',
+var twimlString = '<?xml version="1.0" encoding="UTF-8"?><Response><Message>hi</Message></Response>',
     params = {
         To:'+16515556677',
         From:'+16515556699',
