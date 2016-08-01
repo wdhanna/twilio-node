@@ -17,7 +17,21 @@ describe('create messaging response TwiML', function() {
   });
 
   it('should serialize multiple messages', function() {
+    var actual = new MessagingResponse();
+    actual.message({
+      to: '18885551234',
+      from: '18885554321'
+    }, 'foobar');
+    actual.message({
+      to: '11234567890',
+      from: '10987654321'
+    });
+    expect(actual.toString()).toEqual('');
+  });
 
-  })
+  it('should serialse a redirect', function() {
+
+  });
+
 
 });
